@@ -45,9 +45,12 @@ All the virtual machines are configured with the hostnames of the other machines
 
 `curl -i -X POST -H "Content-type:multipart/form-data" -F inputstream=@/home/phil/aaa -F poi="@po1.json;type=application/json" http://devsirfserver:8088/sirf/container/myContainer/po`
 
-(this will post the file under `/home/phil/aaa`. The file `po1.json` must contain a JSON PreservationObjectInformation object with a `versionIdentifierUUID`. An example below:
+(this will post the file under `/home/phil/aaa`)
 
-```{
+The file `po1.json` must contain a JSON PreservationObjectInformation object with a `versionIdentifierUUID`. An example below:
+
+```
+{
         "objectIdentifiers": [
           {
             "objectName": [
